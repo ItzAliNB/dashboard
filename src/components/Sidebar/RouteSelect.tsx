@@ -20,8 +20,8 @@ const Route = ({ to, Icon, title }: { to: string; Icon: React.ComponentType<Reac
         <Link
             to={to}
             className={`flex items-center justify-center lg:justify-start gap-2 w-full rounded px-2 py-2.5 text-sm transition-all duration-200 ${selected
-                    ? 'bg-purple-700 text-gray-100 shadow-md'
-                    : 'bg-transparent text-gray-300 hover:bg-purple-600 hover:text-gray-100'
+                    ? 'bg-purple-700 dark:bg-white text-gray-100 dark:text-black shadow-md'
+                    : 'bg-transparent text-gray-300 dark:hover:bg-gray-200 hover:bg-purple-600 dark:hover:text-black'
                 }`}
         >
             <Icon className="w-5 h-5" />

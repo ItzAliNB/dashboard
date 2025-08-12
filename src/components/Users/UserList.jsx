@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import users from "../../Data";
+import { FaUser } from "react-icons/fa";
+import { FiMenu } from "react-icons/fi";
 
 export const UserList = () => {
   const [showAll, setShowAll] = useState(false);
@@ -54,9 +56,9 @@ export const UserList = () => {
   return (
     <div className="max-w-full mx-auto">
       <div className="">
-        <table className="w-full table-auto border-collapse bg-white shadow-md rounded-lg">
+        <table className="w-full table-auto border-collapse bg-white dark:bg-neutral-800 shadow-md rounded-lg">
           <thead>
-            <tr className="bg-purple-600 text-white">
+            <tr className="bg-purple-600 dark:bg-white dark:text-black text-white">
               <th className="px-4 py-2 text-left font-semibold w-16">
                 ID
               </th>
@@ -69,12 +71,12 @@ export const UserList = () => {
                   <div className="relative">
                     <button
                       onClick={() => setMenuOpen(!menuOpen)}
-                      className="ml-2 px-2 py-1 bg-purple-700 rounded hover:bg-purple-800"
+                      className="ml-2 px-2 py-2 rounded bg-purple-700 hover:bg-purple-800 dark:bg-neutral-800 dark:hover:bg-neutral-900"
                     >
-                      ☰
+                      <FiMenu className="text-white"/>
                     </button>
                     {menuOpen && (
-                      <div className="absolute right-0 mt-2 w-44 bg-white border rounded shadow-lg z-10 text-black">
+                      <div className="absolute right-0 mt-2 w-44 bg-white dark: border rounded shadow-lg z-10 text-black">
                         <button
                           className="block w-full px-4 py-2 text-left hover:bg-gray-100"
                           onClick={() => {
@@ -122,7 +124,7 @@ export const UserList = () => {
             {displayedUsers.map((user) => (
               <tr
                 key={user.id}
-                className="border-b hover:bg-gray-50"
+                className="border-b hover:bg-gray-50 dark:hover:bg-neutral-700"
               >
                 <td className="px-4 py-2">{user.id}</td>
                 <td className="px-4 py-2">{user.user}</td>
@@ -139,7 +141,7 @@ export const UserList = () => {
         <div className="text-center mt-4">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition"
+            className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 dark:bg-neutral-800 dark:hover:bg-neutral-700 transition"
           >
             {showAll ? "Show Less" : "Show More"}
           </button>

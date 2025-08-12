@@ -42,12 +42,12 @@
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none; /* برای Chrome, Safari و Opera */
+  display: none; 
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none; /* برای IE و Edge */
-  scrollbar-width: none; /* برای Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 :root {
